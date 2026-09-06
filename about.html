@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Nabil Sehli</title>
+<meta name="description" content="Full-stack developer from Midelt, Morocco. Background, approach, and the stack I ship in.">
+<meta property="og:title" content="About — Nabil Sehli">
+<meta property="og:description" content="Full-stack developer from Midelt, Morocco. Background, approach, and the stack I ship in.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+  /* set the theme before first paint so the page never flashes */
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+      else if (matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"><i></i></div>
+
+<div class="topbar">
+  <a class="wordmark" href="index.html">Nabil Sehli</a>
+  <span class="tmeta">
+    <span class="zone">Africa/Casablanca</span>
+    <span class="clock" id="clock">--:--:--</span>
+  </span>
+</div>
+
+<nav class="pillnav" aria-label="Main">
+  <a class="home" href="index.html" aria-label="Home">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+  </a>
+  <div class="sep"></div>
+  <a href="about.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg><span class="lbl">About</span></a>
+  <a href="work.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12"/></svg><span class="lbl">Work</span></a>
+  <a href="studies.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2 2 0 0 1 6 4h13v16H6a2 2 0 0 1-2-2z"/><path d="M19 16H6a2 2 0 0 0-2 2"/></svg><span class="lbl">Studies</span></a>
+  <a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="lbl">Contact</span></a>
+  <div class="sep"></div>
+  <button id="themeBtn" type="button" aria-label="Toggle dark mode">
+    <svg id="icoTheme" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></svg>
+  </button>
+</nav>
+
+<main class="pagefade">
+
+<header class="pagehead">
+  <div class="bloom bloom-a"></div>
+  <div class="shell">
+    <p class="label" data-r>About</p>
+    <h1 class="bigname" data-r>Nabil Sehli</h1>
+    <p class="tagline" data-r>Complete systems, not just the front end</p>
+    <p class="intro" data-r>
+      A full-stack developer from Midelt, Morocco, who is as comfortable owning the production host
+      as the code running on it.
+    </p>
+  </div>
+</header>
+
+<section class="band band-tight">
+  <div class="shell split">
+    <div data-r>
+      <p class="label">Background</p>
+      <h2 class="h-sec" style="margin-top:12px">How I got here</h2>
+    </div>
+    <div data-r>
+      <p>
+        I hold a European Bachelor's in IT and Networks, specialised in database development and SQL,
+        with a state-certified Higher Technician Diploma in system administration and networking behind
+        it. That combination is why deployment has never felt like somebody else's department: I set up
+        the host, the reverse proxy and the backup schedule for my own projects, and I would rather
+        understand the whole path from a schema change to a running container than hand half of it off.
+      </p>
+      <p>
+        I pick projects in domains that come with real rules, because that's where the interesting
+        engineering is. A language-learning platform has to model CEFR levels and keep tenants isolated;
+        a care-documentation app has to satisfy an inspector who will ask who wrote a record and whether
+        anyone altered it since. Neither is solved by another CRUD screen.
+      </p>
+      <p>
+        What I care about most is the part that fails quietly: a deploy that half-succeeds, a schema
+        tool that drops a column it thinks is redundant, an audit log that can be altered by the person
+        it's meant to hold accountable. Those are the decisions I write down, and the ones I'd want to
+        talk through in an interview.
+      </p>
+      <div class="chips">
+        <span class="chip"><b>Java</b> &middot; Spring Boot</span>
+        <span class="chip"><b>TypeScript</b> &middot; React 19</span>
+        <span class="chip"><b>Rust</b> &middot; Tauri v2</span>
+        <span class="chip"><b>SQL</b> &middot; Postgres, MySQL, SQLite</span>
+        <span class="chip"><b>Docker</b> &middot; AWS &middot; Caddy</span>
+        <span class="chip"><b>Flutter</b> &middot; Dart</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band band-tight">
+  <div class="shell split">
+    <div data-r>
+      <p class="label">Stack</p>
+      <h2 class="h-sec" style="margin-top:12px">What I work in</h2>
+      <p style="margin-top:16px;font-size:.9375rem">Grouped by where I've actually shipped it.</p>
+    </div>
+    <dl style="margin:0" data-r>
+      <div class="skillrow"><dt>Backend</dt><dd>
+        <div class="k">Java &middot; Spring Boot &middot; Node.js &middot; TypeScript &middot; Hono &middot; tRPC &middot; Rust</div>
+        <div class="v">Spring Boot in freelance client work; Hono and tRPC across a production platform; Rust for a desktop application's entire backend.</div>
+      </dd></div>
+      <div class="skillrow"><dt>Frontend</dt><dd>
+        <div class="k">React &middot; TypeScript &middot; Tailwind CSS</div>
+        <div class="v">React 19 with an end-to-end typed API layer, and internationalised interfaces built with i18next.</div>
+      </dd></div>
+      <div class="skillrow"><dt>Mobile &amp; desktop</dt><dd>
+        <div class="k">Flutter &middot; Dart &middot; Tauri v2</div>
+        <div class="v">Tauri v2 with a Rust core for an offline-first desktop application.</div>
+      </dd></div>
+      <div class="skillrow"><dt>Data</dt><dd>
+        <div class="k">PostgreSQL &middot; MySQL &middot; SQLite &middot; Drizzle ORM</div>
+        <div class="v">Specialised in database development during my Bachelor's; versioned migrations and a documented production migration policy in practice.</div>
+      </dd></div>
+      <div class="skillrow"><dt>Infrastructure</dt><dd>
+        <div class="k">Docker &middot; AWS &middot; Caddy &middot; pull-based deploys</div>
+        <div class="v">A single-host production stack I set up and maintain, with health checks, automatic rollback and nightly backups.</div>
+      </dd></div>
+      <div class="skillrow"><dt>Security</dt><dd>
+        <div class="k">Multi-tenant isolation &middot; access control &middot; audit trails</div>
+        <div class="v">argon2id hashing, server-side sessions, role and per-record guards, hash-chained audit logging.</div>
+      </dd></div>
+      <div class="skillrow"><dt>Testing &amp; AI</dt><dd>
+        <div class="k">Playwright &middot; Vitest &middot; Rust test harnesses &middot; LLM and agent integration</div>
+        <div class="v">176 Rust tests written against deliberately broken code first; browser automation that keeps documentation in step with the UI.</div>
+      </dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="band band-tight">
+  <div class="shell split">
+    <div data-r>
+      <p class="label">Languages</p>
+      <h2 class="h-sec" style="margin-top:12px">Languages</h2>
+    </div>
+    <div data-r>
+      <div class="lang"><span class="n">Moroccan Arabic</span><span class="l">Native</span><span class="x"></span></div>
+      <div class="lang"><span class="n">French</span><span class="l">C1 &mdash; fluent</span><span class="x">Language of my technical education.</span></div>
+      <div class="lang"><span class="n">English</span><span class="l">C1 &mdash; fluent</span><span class="x">Working language for documentation and code.</span></div>
+      <div class="lang"><span class="n">German</span><span class="l">B1 &mdash; &Ouml;SD</span><span class="x">Working toward B2. Both projects ship German interfaces.</span></div>
+      <div class="actions">
+        <a class="btn btn-primary" href="work.html">See the work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="shell in">
+    <span>Nabil Sehli — 2026</span>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="work.html">Work</a>
+      <a href="studies.html">Studies</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <span>Built with Lenis + GSAP</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/main.js"></script>
+
+</body>
+</html>

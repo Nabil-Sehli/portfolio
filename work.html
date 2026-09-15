@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Work — Nabil Sehli</title>
-<meta name="description" content="Three projects built end to end: a language-school platform in production, an offline care-documentation desktop app, and AI call-center automations in n8n.">
+<meta name="description" content="Four projects built end to end: a language-school platform in production, an offline care-documentation desktop app, a batch and streaming data platform, and AI call-center automations in n8n.">
 <meta property="og:title" content="Work — Nabil Sehli">
-<meta property="og:description" content="Three projects built end to end: a language-school platform in production, an offline care-documentation desktop app, and AI call-center automations in n8n.">
+<meta property="og:description" content="Four projects built end to end: a language-school platform in production, an offline care-documentation desktop app, a batch and streaming data platform, and AI call-center automations in n8n.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,9 +58,9 @@
   <div class="bloom bloom-a"></div>
   <div class="shell">
     <p class="label" data-r>Selected work</p>
-    <h1 data-r>Three projects, built end to end</h1>
+    <h1 data-r>Four projects, built end to end</h1>
     <p class="intro" data-r>
-      Schema, server, client, workflows and deployment &mdash; all three are mine from the ground up. Each one
+      Schema, server, client, pipelines and deployment &mdash; all four are mine from the ground up. Each one
       below carries the screens it actually ships, and the decisions I would defend in a review.
     </p>
   </div>
@@ -225,6 +225,77 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
           <li><b>Timestamps are local wall-clock.</b> Duration arithmetic is DST-safe and tested, but during the repeated hour at the autumn change two instants render identically.</li>
           <li><b>Not a certified medical device,</b> and not validated against the regulations a real care facility is bound by.</li>
         </ul>
+      </div>
+    </article>
+
+    <article class="proj" data-r>
+      <div class="proj-top">
+        <div>
+          <h2>Bike-share Data Platform</h2>
+          <p class="sub">Batch, streaming and API data on Citi Bike, end to end on one machine.</p>
+          <div class="proj-links">
+            <a href="https://github.com/Nabil-Sehli/bikeshare-data-platform">Source <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+            <span>Docker Compose &mdash; one command to provision, one to run</span>
+          </div>
+        </div>
+        <div>
+          <p>
+            Bike-share operators plan demand, react to weather, and truck bikes from stations that
+            fill up to stations that drain. This platform answers those questions from three kinds of
+            data: millions of historical trips, hourly weather, and the live status of every station.
+          </p>
+          <p>
+            Spark cleans and aggregates the monthly trip archives into a MinIO data lake and a
+            partitioned Postgres warehouse. A Kafka producer streams station status every minute. dlt
+            loads weather and reference data, dbt and Bruin model and test it, Kestra orchestrates all
+            of it, and Terraform provisions the bucket, schemas and roles.
+          </p>
+          <p>
+            A Streamlit dashboard reads it as a read-only role: demand, weather impact, rebalancing, a
+            live station map, and the pipeline's own data-quality audit.
+          </p>
+        </div>
+      </div>
+
+      <dl class="stats">
+        <div><dt>Scale</dt><dd>4.76M<small>NYC trips in one month, end to end</small></dd></div>
+        <div><dt>Wall time</dt><dd>&lt;9 min<small>download to dashboard, on a laptop</small></dd></div>
+        <div><dt>dbt tests</dt><dd>30+<small>incl. reconciliation with Spark's audit</small></dd></div>
+        <div><dt>Rejected</dt><dd>0.04%<small>rows failing Spark's quality rules</small></dd></div>
+      </dl>
+
+      <div style="margin-top:44px">
+<div class="stage" data-carousel id="bikeCarousel">
+  <div class="slides">
+    <div class="slide on" data-grad="linear-gradient(135deg,#34D399,#A7F3D0 45%,#60A5FA)" data-title="Live network" data-desc="Every New York station from the Kafka stream, refreshed every 60 seconds"><img src="assets/img/bike-live-nyc.webp" alt="Live network — Every New York station from the Kafka stream, refreshed every 60 seconds" loading="eager"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#818CF8,#C4B5FD 45%,#93C5FD)" data-title="Kestra backfill" data-desc="Reference data, trips, streaming, dbt and Bruin as subflows, in order"><img src="assets/img/bike-kestra.webp" alt="Kestra backfill — Reference data, trips, streaming, dbt and Bruin as subflows, in order" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#60A5FA,#93C5FD 45%,#FDBA74)" data-title="Demand" data-desc="A million Jersey City trips in 2025, members against casual riders"><img src="assets/img/bike-demand.webp" alt="Demand — A million Jersey City trips in 2025, members against casual riders" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#FB923C,#FDBA74 45%,#93C5FD)" data-title="Weather impact" data-desc="Trips per hour by temperature band, dry against wet"><img src="assets/img/bike-weather.webp" alt="Weather impact — Trips per hour by temperature band, dry against wet" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#F472B6,#FBCFE8 45%,#60A5FA)" data-title="Rebalancing" data-desc="The stations that drain and the ones that fill up"><img src="assets/img/bike-stations.webp" alt="Rebalancing — The stations that drain and the ones that fill up" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#2DD4BF,#5EEAD4 45%,#A78BFA)" data-title="Data quality" data-desc="Spark's load audit per month, and Bruin's network-health snapshots"><img src="assets/img/bike-quality.webp" alt="Data quality — Spark's load audit per month, and Bruin's network-health snapshots" loading="lazy"></div>
+  </div>
+</div>
+<div class="track" role="tablist" aria-label="Screens"></div>
+<div class="slide-meta"><span class="t"></span><span class="d"></span></div>
+      </div>
+
+      <div class="notes">
+        <div class="note">
+          <div><span class="tag">Idempotency</span><h4>Every step can be run twice without doubling anything</h4></div>
+          <div><p>Lake months get a <em>_SUCCESS</em> marker, so a re-run skips finished downloads. Spark deletes and reloads one city and month at a time. dlt merges on natural keys with incremental state, and the live upsert refuses an event older than the one it already holds. A backfill that dies halfway is fixed by running it again.</p></div>
+        </div>
+        <div class="note">
+          <div><span class="tag">Reconciliation</span><h4>The warehouse has to agree with Spark, row for row</h4></div>
+          <div><p>Spark records raw, clean and rejected counts for every month it loads. A dbt test checks that the fact table's row count matches that audit exactly, so a silently dropped partition fails the build instead of quietly shrinking a chart.</p></div>
+        </div>
+        <div class="note">
+          <div><span class="tag">Streaming</span><h4>At-least-once delivery, with the duplicates handled on purpose</h4></div>
+          <div><p>The producer publishes only stations whose report changed, keyed by station so each one's events stay in order. The lake consumer commits offsets only after its Parquet file is written, so a crash re-reads rather than loses messages, and dbt removes the duplicates that choice creates.</p></div>
+        </div>
+        <div class="note">
+          <div><span class="tag">Warehouse</span><h4>Postgres, used the way a cloud warehouse would be</h4></div>
+          <div><p>Trips are range-partitioned by month, so a month filter prunes and a reload touches one partition. A BRIN index covers the time column for next to nothing on time-ordered data. The dashboard connects as a read-only role that can see the marts and nothing else.</p></div>
+        </div>
       </div>
     </article>
 

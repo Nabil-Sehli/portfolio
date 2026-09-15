@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Work — Nabil Sehli</title>
-<meta name="description" content="Two projects built end to end: a language-school platform in production, and an offline care-documentation desktop app.">
+<meta name="description" content="Three projects built end to end: a language-school platform in production, an offline care-documentation desktop app, and AI call-center automations in n8n.">
 <meta property="og:title" content="Work — Nabil Sehli">
-<meta property="og:description" content="Two projects built end to end: a language-school platform in production, and an offline care-documentation desktop app.">
+<meta property="og:description" content="Three projects built end to end: a language-school platform in production, an offline care-documentation desktop app, and AI call-center automations in n8n.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,9 +58,9 @@
   <div class="bloom bloom-a"></div>
   <div class="shell">
     <p class="label" data-r>Selected work</p>
-    <h1 data-r>Two projects, built end to end</h1>
+    <h1 data-r>Three projects, built end to end</h1>
     <p class="intro" data-r>
-      Schema, server, client and deployment &mdash; both of these are mine from the database up. Each one
+      Schema, server, client, workflows and deployment &mdash; all three are mine from the ground up. Each one
       below carries the screens it actually ships, and the decisions I would defend in a review.
     </p>
   </div>
@@ -225,6 +225,76 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
           <li><b>Timestamps are local wall-clock.</b> Duration arithmetic is DST-safe and tested, but during the repeated hour at the autumn change two instants render identically.</li>
           <li><b>Not a certified medical device,</b> and not validated against the regulations a real care facility is bound by.</li>
         </ul>
+      </div>
+    </article>
+
+    <article class="proj" data-r>
+      <div class="proj-top">
+        <div>
+          <h2>Solar Call Center Automations</h2>
+          <p class="sub">Two n8n workflows for an outbound call center booking solar and roofing appointments.</p>
+          <div class="proj-links">
+            <a href="https://github.com/Nabil-Sehli/n8n-solar-callcenter-automations">Source <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+            <span>Self-hosted n8n &mdash; importable workflow JSON</span>
+          </div>
+        </div>
+        <div>
+          <p>
+            <b>AI Lead Qualification</b> scores every new lead from 0 to 100 the moment it arrives,
+            logs it to a Google Sheet, returns the score to the dialer, and emails a closer about hot
+            leads with a suggested opening line. Renters and &ldquo;just curious&rdquo; leads go to a
+            nurture queue instead of eating a rep's dials.
+          </p>
+          <p>
+            <b>Missed Call SMS Follow-up</b> waits two minutes after a no-answer, has an LLM draft a
+            short text, forces that text to be compliant in code, logs it, and sends exactly one
+            follow-up an hour later unless the contact replied or opted out.
+          </p>
+          <p>
+            Both call Claude by default through n8n's core HTTP Request node, with a one-field switch
+            to Gemini. Prompts, thresholds and recipients sit in one config node a sales manager can
+            edit without touching code.
+          </p>
+        </div>
+      </div>
+
+      <dl class="stats">
+        <div><dt>Workflows</dt><dd>2<small>38 nodes, no community nodes</small></dd></div>
+        <div><dt>Unit tests</dt><dd>43<small>run against the built workflow JSON</small></dd></div>
+        <div><dt>End to end</dt><dd>23/23<small>checks on a real n8n 2.38.7 instance</small></dd></div>
+        <div><dt>SMS</dt><dd>160<small>characters, one segment, guaranteed</small></dd></div>
+      </dl>
+
+      <div style="margin-top:44px">
+<div class="stage" data-carousel id="n8nCarousel">
+  <div class="slides">
+    <div class="slide on" data-grad="linear-gradient(135deg,#FB923C,#FDBA74 45%,#FBCFE8)" data-title="Lead qualification" data-desc="Validate, score with Claude or Gemini, log, respond, then route"><img src="assets/img/n8n-lead-canvas.webp" alt="Lead qualification — Validate, score with Claude or Gemini, log, respond, then route" loading="eager"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#FBBF24,#FDBA74 45%,#F0ABFC)" data-title="Parse Score" data-desc="A stubbed reply said 104 and &ldquo;warm&rdquo;; the parser clamped it and derived &ldquo;hot&rdquo;"><img src="assets/img/n8n-lead-parse.webp" alt="Parse Score — A stubbed reply said 104 and warm; the parser clamped it and derived hot" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#F472B6,#FBCFE8 45%,#C4B5FD)" data-title="Missed call follow-up" data-desc="Wait, draft, enforce, log, then one follow-up an hour later"><img src="assets/img/n8n-sms-canvas.webp" alt="Missed call follow-up — Wait, draft, enforce, log, then one follow-up an hour later" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#2DD4BF,#5EEAD4 45%,#FDBA74)" data-title="Enforce SMS Rules" data-desc="Emoji, curly quotes and the wrong opt-out line, fixed in code"><img src="assets/img/n8n-sms-enforce.webp" alt="Enforce SMS Rules — Emoji, curly quotes and the wrong opt-out line, fixed in code" loading="lazy"></div>
+  </div>
+</div>
+<div class="track" role="tablist" aria-label="Screens"></div>
+<div class="slide-meta"><span class="t"></span><span class="d"></span></div>
+      </div>
+
+      <div class="notes">
+        <div class="note">
+          <div><span class="tag">Parsing</span><h4>The model's answer is read, never trusted</h4></div>
+          <div><p>The parser pulls JSON out of code fences and surrounding prose, skips thinking blocks, clamps the score to 0&ndash;100 and caps renters in code. The tier comes from the score and the configured thresholds, not from the model, so routing never depends on the model agreeing with itself. Its own tier is kept only for tuning the prompt.</p></div>
+        </div>
+        <div class="note">
+          <div><span class="tag">Failures</span><h4>A lead the AI couldn't score goes to a person</h4></div>
+          <div><p>The LLM calls retry three times and then continue on error. A refusal, a timeout or unreadable output becomes <em>scoring_status: failed</em> and emails a closer right away. Parking it in nurture could bury a hot lead, and an outage should turn into manual work, not dropped leads.</p></div>
+        </div>
+        <div class="note">
+          <div><span class="tag">Compliance</span><h4>The prompt asks for a compliant text; the code guarantees it</h4></div>
+          <div><p>One curly apostrophe or emoji switches an SMS to UCS-2, where a segment is 70 characters instead of 160 and the message is split and billed several times. The enforcement node converts to plain ASCII, strips whatever opt-out wording the model wrote, appends the exact configured line, and falls back to a fixed template if the draft still doesn't fit.</p></div>
+        </div>
+        <div class="note">
+          <div><span class="tag">Ordering</span><h4>A 200 means the lead is saved</h4></div>
+          <div><p>The webhook answers only after the Sheet write. If Sheets is down, the dialer gets an error and retries, so a lead is never acknowledged and then lost. Phone numbers and emails are never sent to the model, because it doesn't need them to score.</p></div>
+        </div>
       </div>
     </article>
 

@@ -76,7 +76,7 @@
           <p class="sub">A platform language schools run their teaching on.</p>
           <div class="proj-links">
             <a href="https://deutscheslernzentrum.de">deutscheslernzentrum.de <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-            <a href="https://github.com/Nabil-Sehli/deutsches-lernzentrum-">Source <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+            <span>Private repository &mdash; source on request</span>
           </div>
         </div>
         <div>
@@ -384,7 +384,8 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
           <p>
             My other projects are applications. This one is the ground they stand on: one ARM server
             created by Terraform and configured by Ansible, running a reverse proxy, the n8n
-            automations, uptime checks with a public status page, and a metrics stack.
+            automations, uptime checks with a public status page, a metrics stack, and a collector
+            that turns every LLM run into a trace, metrics and a cost figure.
           </p>
           <p>
             Nothing on it was clicked together by hand. A fresh box reaches the same state from this
@@ -410,7 +411,7 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
         <div class="stage" style="--stage-grad:linear-gradient(135deg,#60A5FA,#A78BFA 45%,#5EEAD4)">
           <div class="slides">
             <div class="slide on">
-              <svg viewBox="0 0 1000 400" style="display:block;width:100%;height:auto;border-radius:10px;box-shadow:0 24px 70px rgba(0,0,0,.34);background:#fff;font-family:inherit" role="img" aria-label="Architecture diagram: the internet reaches Caddy, the only container publishing ports; behind it run n8n, Uptime Kuma and Grafana. Prometheus and Alertmanager scrape node_exporter and cAdvisor, and both Uptime Kuma and Alertmanager send alerts to Telegram. The Docker volumes are copied nightly by restic to Backblaze B2.">
+              <svg viewBox="0 0 1000 400" style="display:block;width:100%;height:auto;border-radius:10px;box-shadow:0 24px 70px rgba(0,0,0,.34);background:#fff;font-family:inherit" role="img" aria-label="Architecture diagram: the internet reaches Caddy, the only container publishing ports; behind it run n8n, Uptime Kuma and Grafana. Every n8n run posts an event to the llmobs collector, which Prometheus scrapes alongside node_exporter and cAdvisor. Both Uptime Kuma and Alertmanager send alerts to Telegram, and the Docker volumes are copied nightly by restic to Backblaze B2.">
                 <defs>
                   <marker id="opsArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
                     <path d="M0 0 10 5 0 10z" fill="#A9A9B4"/>
@@ -422,6 +423,8 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
                   <path d="M400 70h58"/>
                   <path d="M400 78 462 156"/>
                   <path d="M835 150v-12"/>
+                  <path d="M650 44h58"/>
+                  <path d="M835 68v6"/>
                   <path d="M650 158 714 116"/>
                   <path d="M560 188v40"/>
                   <path d="M650 266h58"/>
@@ -437,6 +440,7 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
                   <rect x="470" y="20" width="180" height="48" rx="10"/>
                   <rect x="470" y="88" width="180" height="48" rx="10"/>
                   <rect x="470" y="140" width="180" height="48" rx="10"/>
+                  <rect x="720" y="16" width="230" height="52" rx="10"/>
                   <rect x="720" y="80" width="230" height="52" rx="10"/>
                   <rect x="720" y="150" width="230" height="48" rx="10"/>
                   <rect x="20" y="244" width="180" height="52" rx="10"/>
@@ -450,6 +454,7 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
                   <text x="560" y="49">n8n</text>
                   <text x="560" y="117">Uptime Kuma</text>
                   <text x="560" y="169">Grafana</text>
+                  <text x="835" y="38">llmobs collector</text>
                   <text x="835" y="102">Prometheus + Alertmanager</text>
                   <text x="835" y="179">node_exporter + cAdvisor</text>
                   <text x="110" y="269">Telegram</text>
@@ -459,6 +464,7 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
                 </g>
                 <g fill="#92929A" font-size="12" text-anchor="middle">
                   <text x="315" y="82">TLS, the only open ports</text>
+                  <text x="835" y="56">trace, metrics and cost per run</text>
                   <text x="110" y="286">failures, and silence</text>
                   <text x="560" y="275">SQLite, certificates</text>
                   <text x="835" y="287">consistent copies, retention</text>
@@ -485,8 +491,16 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
           <div><p>Alertmanager reports what is wrong: disk over 80%, a disk that will be full within a day, memory, an out-of-memory kill, a container that vanished. A push monitor reports <em>silence</em> &mdash; when a nightly backup doesn't check in within 26 hours, that is its own alert. The drill also measured the blind spot: an outage has to last about three minutes before either path speaks, which is the price of not being trained to ignore Telegram.</p></div>
         </div>
         <div class="note">
+          <div><span class="tag">LLM observability</span><h4>&ldquo;A run failed&rdquo; is not an answer</h4></div>
+          <div><p>Prometheus says a container is up and n8n says an execution failed. Neither says <em>which node</em> broke, on which model, after how long, or what the run cost. So every run posts one HTTP event to a collector I wrote &mdash; about 600 lines, standard library only &mdash; which turns it into a readable trace and eight metric families: failures by node and error type, per-node latency, tokens and spend per model. Failures needed no workflow edits at all: an error-trigger workflow reports every failed execution in n8n. Retries are deduplicated by run id, because n8n retries a failed HTTP node three times and each retry would otherwise inflate every rate and every cost figure. The <a href="https://github.com/Nabil-Sehli/oracle-ops-platform/blob/main/docs/llm-observability.md">write-up</a> covers the rest, including why a model missing from the price table raises its own alert &mdash; a spend panel that quietly reads $0.00 after a model switch is worse than no panel.</p></div>
+        </div>
+        <div class="note">
+          <div><span class="tag">Incident</span><h4>The monitoring stack was the one thing nothing was watching</h4></div>
+          <div><p>Unattended upgrades reboot the box nightly. One morning six containers came back and two did not: Prometheus and Alertmanager handle <em>SIGTERM</em> in about 100&nbsp;ms, so they reached a clean stopped state before the Docker daemon went down &mdash; and <em>restart: unless-stopped</em> does not restart a container that is stopped, whoever stopped it. The well-behaved containers were punished for being well-behaved. Metrics and alerts were blind for 35 hours and nothing said so, because every rule that would have caught it was evaluated by Prometheus itself. <em>restart: always</em> fixed the restart; noticing a recurrence needed something outside the alerting system, so Uptime Kuma &mdash; a separate process with its own Telegram path &mdash; now health-checks both of them internally. Stopping Prometheus on purpose the same day: 89 seconds to detect. A reboot drill followed, and all nine containers came back unattended in 1m&nbsp;41s. The <a href="https://github.com/Nabil-Sehli/oracle-ops-platform/blob/main/docs/incidents/2026-09-18-monitoring-silent-after-reboot.md">write-up</a> has the timeline.</p></div>
+        </div>
+        <div class="note">
           <div><span class="tag">Exposure</span><h4>One way in, and the webhooks cost money</h4></div>
-          <div><p>Only the proxy publishes ports; n8n, Grafana and the rest are unreachable except through it, and node_exporter binds to the Docker bridge address instead of the public interface. The n8n webhooks spend LLM quota and send mail, so the proxy rejects anything without a shared-secret header before n8n starts an execution. SSH is key-only, from my address, with repeat offenders banned.</p></div>
+          <div><p>Only the proxy publishes ports; n8n, Grafana and the rest are unreachable except through it, and node_exporter binds to the Docker bridge address instead of the public interface. The n8n webhooks spend LLM quota and send mail, so the proxy rejects anything without a shared-secret header before n8n starts an execution. SSH no longer listens to the internet at all: port 22 is closed in the firewall and the only way in is over a private Tailscale network, key-only, with repeat offenders banned.</p></div>
         </div>
       </div>
     </article>

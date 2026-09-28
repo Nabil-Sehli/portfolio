@@ -8,10 +8,21 @@
 <meta property="og:title" content="Work — Nabil Sehli">
 <meta property="og:description" content="Five projects built end to end: a language-school platform in production, an offline care-documentation desktop app, a batch and streaming data platform, AI call-center automations in n8n, and the ops platform that runs and backs them up.">
 <meta property="og:type" content="website">
+<!-- @head -->
+<link rel="canonical" href="https://nabil-sehli.github.io/portfolio/work.html">
+<meta property="og:url" content="https://nabil-sehli.github.io/portfolio/work.html">
+<meta property="og:site_name" content="Nabil Sehli">
+<meta property="og:image" content="https://nabil-sehli.github.io/portfolio/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nabil Sehli, full-stack developer: React/TypeScript, Java/Spring Boot, Rust and Python.">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ffffff">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/style.css">
 <script>
   /* set the theme before first paint so the page never flashes */
@@ -24,9 +35,11 @@
     } catch (e) {}
   })();
 </script>
+<!-- /@head -->
 </head>
 <body>
 
+<!-- @header -->
 <div class="cursor-glow" id="cursorGlow" aria-hidden="true"><i></i></div>
 
 <div class="topbar">
@@ -39,18 +52,19 @@
 
 <nav class="pillnav" aria-label="Main">
   <a class="home" href="index.html" aria-label="Home">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
   </a>
   <div class="sep"></div>
-  <a href="about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg><span class="lbl">About</span></a>
-  <a href="work.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12"/></svg><span class="lbl">Work</span></a>
-  <a href="studies.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2 2 0 0 1 6 4h13v16H6a2 2 0 0 1-2-2z"/><path d="M19 16H6a2 2 0 0 0-2 2"/></svg><span class="lbl">Studies</span></a>
-  <a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="lbl">Contact</span></a>
+  <a href="about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg><span class="lbl">About</span></a>
+  <a href="work.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12"/></svg><span class="lbl">Work</span></a>
+  <a href="studies.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2 2 0 0 1 6 4h13v16H6a2 2 0 0 1-2-2z"/><path d="M19 16H6a2 2 0 0 0-2 2"/></svg><span class="lbl">Studies</span></a>
+  <a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="lbl">Contact</span></a>
   <div class="sep"></div>
   <button id="themeBtn" type="button" aria-label="Toggle dark mode">
-    <svg id="icoTheme" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></svg>
+    <svg id="icoTheme" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"></svg>
   </button>
 </nav>
+<!-- /@header -->
 
 <main class="pagefade">
 
@@ -63,21 +77,40 @@
       Schema, server, client, pipelines, deployment and the server they run on &mdash; all five are mine from the ground up. Each one
       below carries the screens it actually ships, and the decisions I would defend in a review.
     </p>
+    <nav class="pindex" aria-label="Projects" data-r>
+      <a href="#dlz"><span class="n">01</span><span class="t">Deutsches Lernzentrum</span><span class="k">Web platform, in production</span></a>
+      <a href="#caretrack"><span class="n">02</span><span class="t">CareTrack</span><span class="k">Offline desktop application</span></a>
+      <a href="#bikeshare"><span class="n">03</span><span class="t">Bike-share Data Platform</span><span class="k">Batch and streaming data</span></a>
+      <a href="#n8n"><span class="n">04</span><span class="t">Solar Call Center Automations</span><span class="k">AI workflows in n8n</span></a>
+      <a href="#ops-platform"><span class="n">05</span><span class="t">Ops Platform</span><span class="k">Infrastructure and operations</span></a>
+    </nav>
   </div>
 </header>
 
 <section class="band band-tight">
   <div class="shell">
 
-    <article class="proj" data-r>
+    <article class="proj" id="dlz" data-r>
       <div class="proj-top">
         <div>
+          <p class="label proj-kind">01 &middot; Web platform &middot; in production</p>
           <h2>Deutsches Lernzentrum</h2>
           <p class="sub">A platform language schools run their teaching on.</p>
           <div class="proj-links">
             <a href="https://deutscheslernzentrum.de">deutscheslernzentrum.de <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
             <span>Private repository &mdash; source on request</span>
           </div>
+          <ul class="stack" aria-label="Stack">
+            <li>React 19</li>
+            <li>TypeScript</li>
+            <li>Hono</li>
+            <li>tRPC</li>
+            <li>Drizzle</li>
+            <li>MySQL</li>
+            <li>Docker</li>
+            <li>Caddy</li>
+            <li>Playwright</li>
+          </ul>
         </div>
         <div>
           <p>
@@ -103,39 +136,40 @@
       <div style="margin-top:44px">
 <div class="stage" data-carousel id="dlzCarousel">
   <div class="slides">
-    <div class="slide on" data-grad="linear-gradient(135deg,#34D399,#A7F3D0 40%,#93C5FD)" data-title="Quiz builder" data-desc="Adding questions without leaving the lesson list"><img src="assets/img/dlz-quiz-builder.webp" alt="Quiz builder — Adding questions without leaving the lesson list" loading="eager"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#60A5FA,#A7F3D0 45%,#C4B5FD)" data-title="Student progress" data-desc="CEFR milestones A1&ndash;C2, scores over time"><img src="assets/img/dlz-progress.webp" alt="Student progress — CEFR milestones A1&ndash;C2, scores over time" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#818CF8,#C4B5FD 45%,#F0ABFC)" data-title="Quiz analytics" data-desc="How a lesson's questions actually performed"><img src="assets/img/dlz-analytics.webp" alt="Quiz analytics — How a lesson's questions actually performed" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#2DD4BF,#93C5FD 45%,#A78BFA)" data-title="Student list" data-desc="Everyone in the centre, with the level they work at"><img src="assets/img/dlz-students.webp" alt="Student list — Everyone in the centre, with the level they work at" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#34D399,#5EEAD4 45%,#60A5FA)" data-title="Vocabulary trainer" data-desc="Mid-review, one card at a time"><img src="assets/img/dlz-vocabulary.webp" alt="Vocabulary trainer — Mid-review, one card at a time" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#FBBF24,#FDBA74 45%,#F0ABFC)" data-title="Achievements" data-desc="Streak, badges and the centre leaderboard"><img src="assets/img/dlz-achievements.webp" alt="Achievements — Streak, badges and the centre leaderboard" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#93C5FD,#C4B5FD 45%,#FBCFE8)" data-title="Calendar" data-desc="The schedule students are held to, read-only"><img src="assets/img/dlz-calendar.webp" alt="Calendar — The schedule students are held to, read-only" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#34D399,#93C5FD 45%,#C4B5FD)" data-title="Public centre page" data-desc="How a prospective student finds a school"><img src="assets/img/dlz-public-page.webp" alt="Public centre page — How a prospective student finds a school" loading="lazy"></div>
+    <div class="slide on" data-grad="linear-gradient(135deg,#34D399,#A7F3D0 40%,#93C5FD)" data-title="Quiz builder" data-desc="Adding questions without leaving the lesson list"><img src="assets/img/dlz-quiz-builder.webp" width="1280" height="800" alt="Quiz builder — Adding questions without leaving the lesson list" loading="eager"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#60A5FA,#A7F3D0 45%,#C4B5FD)" data-title="Student progress" data-desc="CEFR milestones A1&ndash;C2, scores over time"><img src="assets/img/dlz-progress.webp" width="1280" height="800" alt="Student progress — CEFR milestones A1&ndash;C2, scores over time" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#818CF8,#C4B5FD 45%,#F0ABFC)" data-title="Quiz analytics" data-desc="How a lesson's questions actually performed"><img src="assets/img/dlz-analytics.webp" width="1280" height="800" alt="Quiz analytics — How a lesson's questions actually performed" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#2DD4BF,#93C5FD 45%,#A78BFA)" data-title="Student list" data-desc="Everyone in the centre, with the level they work at"><img src="assets/img/dlz-students.webp" width="1280" height="800" alt="Student list — Everyone in the centre, with the level they work at" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#34D399,#5EEAD4 45%,#60A5FA)" data-title="Vocabulary trainer" data-desc="Mid-review, one card at a time"><img src="assets/img/dlz-vocabulary.webp" width="1280" height="800" alt="Vocabulary trainer — Mid-review, one card at a time" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#FBBF24,#FDBA74 45%,#F0ABFC)" data-title="Achievements" data-desc="Streak, badges and the centre leaderboard"><img src="assets/img/dlz-achievements.webp" width="1280" height="800" alt="Achievements — Streak, badges and the centre leaderboard" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#93C5FD,#C4B5FD 45%,#FBCFE8)" data-title="Calendar" data-desc="The schedule students are held to, read-only"><img src="assets/img/dlz-calendar.webp" width="1280" height="800" alt="Calendar — The schedule students are held to, read-only" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#34D399,#93C5FD 45%,#C4B5FD)" data-title="Public centre page" data-desc="How a prospective student finds a school"><img src="assets/img/dlz-public-page.webp" width="1280" height="800" alt="Public centre page — How a prospective student finds a school" loading="lazy"></div>
   </div>
 </div>
-<div class="track" role="tablist" aria-label="Screens"></div>
+<div class="track"></div>
 <div class="slide-meta"><span class="t"></span><span class="d"></span></div>
       </div>
 
       <div class="notes">
         <div class="note">
-          <div><span class="tag">Deployment</span><h4>A push to main is live in three minutes, or it is rolled back</h4></div>
+          <div><span class="tag">Deployment</span><h3>A push to main is live in three minutes, or it is rolled back</h3></div>
           <div><p>Caddy, the app and MySQL under one docker-compose stack on a single host. Deploys are pull-based: the host notices the commit, builds, health-checks, and reverts to the previous image if the check fails. A deploy that half-succeeds is worse than one that never started, so the failure path is the part that's actually written down.</p></div>
         </div>
         <div class="note">
-          <div><span class="tag">Migrations</span><h4>The schema tool that's convenient in development is banned in production</h4></div>
-          <div><p><em>db:push</em> diffs a schema against a live database and applies whatever it infers. Against production it will silently drop a column it believes is redundant. The deployment docs state it must never touch production, and cover how to recover a database that it already has &mdash; because writing down the recovery is the only version of that rule that survives somebody being in a hurry.</p></div>
+          <div><span class="tag">Migrations</span><h3>The schema tool that's convenient in development is banned in production</h3></div>
+          <div><p><code>db:push</code> diffs a schema against a live database and applies whatever it infers. Against production it will silently drop a column it believes is redundant. The deployment docs state it must never touch production, and cover how to recover a database that it already has &mdash; because writing down the recovery is the only version of that rule that survives somebody being in a hurry.</p></div>
         </div>
         <div class="note">
-          <div><span class="tag">Documentation</span><h4>The screenshots regenerate themselves</h4></div>
+          <div><span class="tag">Documentation</span><h3>The screenshots regenerate themselves</h3></div>
           <div><p>The in-app guide uses twenty screenshots. Captured by hand, they rot the first time a button moves. A seed script builds one self-contained demo centre, and a Playwright script signs in as four account states and captures all twenty at a fixed size &mdash; so &ldquo;am I about to publish a real student's name?&rdquo; is never a judgement call. Every image in the carousel above came out of that pipeline.</p></div>
         </div>
       </div>
     </article>
 
-    <article class="proj" data-r>
+    <article class="proj" id="caretrack" data-r>
       <div class="proj-top">
         <div>
+          <p class="label proj-kind">02 &middot; Desktop application &middot; offline-first</p>
           <h2>CareTrack</h2>
           <p class="sub">Care documentation for a ward, offline, on one machine.</p>
           <div class="proj-links">
@@ -143,6 +177,11 @@
             <a href="https://caretrack-25m.pages.dev/caretrack-demo.html">Live demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
             <span>Tauri v2 desktop application &mdash; Windows installer</span>
           </div>
+          <ul class="stack" aria-label="Stack">
+            <li>Rust</li>
+            <li>Tauri v2</li>
+            <li>SQLite</li>
+          </ul>
         </div>
         <div>
           <p>
@@ -157,9 +196,9 @@
             nurse edits rather than writes from memory.
           </p>
           <p>
-            It is now published: the site carries the Windows installer, and the demo next to it runs the
-            real German interface in a browser against an in-memory stand-in for the Rust backend &mdash;
-            so the application can be tried without installing anything.
+            The site carries the Windows installer, and the live demo runs the real German interface in a
+            browser against an in-memory stand-in for the Rust backend, so the application can be tried
+            without installing anything.
           </p>
         </div>
       </div>
@@ -174,17 +213,17 @@
       <div style="margin-top:44px">
 <div class="stage" data-carousel id="ctCarousel">
   <div class="slides">
-    <div class="slide on" data-grad="linear-gradient(135deg,#A78BFA,#F0ABFC 45%,#FDBA74)" data-title="Shift handover" data-desc="Drafted from every other module, then edited by the nurse"><img src="assets/img/ct-handover.webp" alt="Shift handover — Drafted from every other module, then edited by the nurse" loading="eager"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#2DD4BF,#5EEAD4 40%,#A78BFA)" data-title="Ward overview" data-desc="Every open point across all residents, by severity"><img src="assets/img/ct-overview.webp" alt="Ward overview — Every open point across all residents, by severity" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#60A5FA,#A7F3D0 45%,#C4B5FD)" data-title="Vital signs" data-desc="Trend, reference band, and correctable readings"><img src="assets/img/ct-vitals.webp" alt="Vital signs — Trend, reference band, and correctable readings" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#818CF8,#C4B5FD 45%,#FBCFE8)" data-title="Audit log" data-desc="Filterable, with the chain's integrity stated on the page"><img src="assets/img/ct-audit.webp" alt="Audit log — Filterable, with the chain's integrity stated on the page" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#F472B6,#FBCFE8 45%,#C4B5FD)" data-title="Medication plan" data-desc="Dose times, due-now window, controlled substances flagged"><img src="assets/img/ct-medication.webp" alt="Medication plan — Dose times, due-now window, controlled substances flagged" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#FB923C,#FDBA74 45%,#F0ABFC)" data-title="Fall events" data-desc="The protocol, and a reassessment duty that stays open"><img src="assets/img/ct-falls.webp" alt="Fall events — The protocol, and a reassessment duty that stays open" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#34D399,#A7F3D0 45%,#93C5FD)" data-title="Wound documentation" data-desc="Grouped by location, chronological, progression legible"><img src="assets/img/ct-wounds.webp" alt="Wound documentation — Grouped by location, chronological, progression legible" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#A78BFA,#93C5FD 45%,#5EEAD4)" data-title="Care report" data-desc="A printable extract across every module for a date range"><img src="assets/img/ct-report.webp" alt="Care report — A printable extract across every module for a date range" loading="lazy"></div>
+    <div class="slide on" data-grad="linear-gradient(135deg,#A78BFA,#F0ABFC 45%,#FDBA74)" data-title="Shift handover" data-desc="Drafted from every other module, then edited by the nurse"><img src="assets/img/ct-handover.webp" width="1280" height="800" alt="Shift handover — Drafted from every other module, then edited by the nurse" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#2DD4BF,#5EEAD4 40%,#A78BFA)" data-title="Ward overview" data-desc="Every open point across all residents, by severity"><img src="assets/img/ct-overview.webp" width="1280" height="800" alt="Ward overview — Every open point across all residents, by severity" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#60A5FA,#A7F3D0 45%,#C4B5FD)" data-title="Vital signs" data-desc="Trend, reference band, and correctable readings"><img src="assets/img/ct-vitals.webp" width="1280" height="800" alt="Vital signs — Trend, reference band, and correctable readings" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#818CF8,#C4B5FD 45%,#FBCFE8)" data-title="Audit log" data-desc="Filterable, with the chain's integrity stated on the page"><img src="assets/img/ct-audit.webp" width="1280" height="800" alt="Audit log — Filterable, with the chain's integrity stated on the page" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#F472B6,#FBCFE8 45%,#C4B5FD)" data-title="Medication plan" data-desc="Dose times, due-now window, controlled substances flagged"><img src="assets/img/ct-medication.webp" width="1280" height="800" alt="Medication plan — Dose times, due-now window, controlled substances flagged" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#FB923C,#FDBA74 45%,#F0ABFC)" data-title="Fall events" data-desc="The protocol, and a reassessment duty that stays open"><img src="assets/img/ct-falls.webp" width="1280" height="800" alt="Fall events — The protocol, and a reassessment duty that stays open" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#34D399,#A7F3D0 45%,#93C5FD)" data-title="Wound documentation" data-desc="Grouped by location, chronological, progression legible"><img src="assets/img/ct-wounds.webp" width="1280" height="800" alt="Wound documentation — Grouped by location, chronological, progression legible" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#A78BFA,#93C5FD 45%,#5EEAD4)" data-title="Care report" data-desc="A printable extract across every module for a date range"><img src="assets/img/ct-report.webp" width="1280" height="800" alt="Care report — A printable extract across every module for a date range" loading="lazy"></div>
   </div>
 </div>
-<div class="track" role="tablist" aria-label="Screens"></div>
+<div class="track"></div>
 <div class="slide-meta"><span class="t"></span><span class="d"></span></div>
       </div>
 
@@ -200,19 +239,19 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
 
       <div class="notes">
         <div class="note">
-          <div><span class="tag">Audit</span><h4>The session lives in Rust, so the log is worth reading</h4></div>
+          <div><span class="tag">Audit</span><h3>The session lives in Rust, so the log is worth reading</h3></div>
           <div><p>Every mutating command writes an audit entry carrying the checksum of the one before it, so a removed or altered row breaks the chain visibly. The acting user comes from process state in Rust &mdash; nothing the interface sends can claim an identity. Care documentation is inspected on exactly this basis.</p></div>
         </div>
         <div class="note">
-          <div><span class="tag">Corrections</span><h4>Nothing is ever edited; a mistake is superseded in the open</h4></div>
+          <div><span class="tag">Corrections</span><h3>Nothing is ever edited; a mistake is superseded in the open</h3></div>
           <div><p>A wrong entry is fixed by appending a replacement that names the row it replaces. The original stays as documented, struck through rather than erased. The chain still verifies because no historical row changed, and a corrected-away value stops counting &mdash; a nurse who typed 1500 ml instead of 150 must not still be credited with 1500.</p></div>
         </div>
         <div class="note">
-          <div><span class="tag">Correction</span><h4>The tamper check didn't do what I'd written that it did</h4></div>
+          <div><span class="tag">Correction</span><h3>The tamper check didn't do what I'd written that it did</h3></div>
           <div><p>The test that supposedly proved it deleted a row from the <em>middle</em> of the ledger. Removing rows from the <em>end</em> deletes both sides of every remaining comparison: what's left adds up exactly, and the check reported the ledger intact. The fix records which movement the ledger ended on at each stock count, so a vanished anchor exposes truncation.</p></div>
         </div>
         <div class="note">
-          <div><span class="tag">Hardening</span><h4>A second credential path with none of the first one's protections</h4></div>
+          <div><span class="tag">Hardening</span><h3>A second credential path with none of the first one's protections</h3></div>
           <div><p>Confirming a controlled substance takes a witness password &mdash; which quietly made that field a place to guess passwords. No lockout check, no failure counting, nothing written to the audit log, and it ran before the ledger was touched, so a run of guesses left no trace. Finding it meant asking which <em>other</em> places accept a password.</p></div>
         </div>
       </div>
@@ -228,15 +267,29 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
       </div>
     </article>
 
-    <article class="proj" data-r>
+    <article class="proj" id="bikeshare" data-r>
       <div class="proj-top">
         <div>
+          <p class="label proj-kind">03 &middot; Data engineering &middot; batch and streaming</p>
           <h2>Bike-share Data Platform</h2>
           <p class="sub">Batch, streaming and API data on Citi Bike, end to end on one machine.</p>
           <div class="proj-links">
             <a href="https://github.com/Nabil-Sehli/bikeshare-data-platform">Source <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
             <span>Docker Compose &mdash; one command to provision, one to run</span>
           </div>
+          <ul class="stack" aria-label="Stack">
+            <li>Python</li>
+            <li>Spark</li>
+            <li>Kafka</li>
+            <li>dbt</li>
+            <li>dlt</li>
+            <li>Bruin</li>
+            <li>Kestra</li>
+            <li>PostgreSQL</li>
+            <li>MinIO</li>
+            <li>Terraform</li>
+            <li>Streamlit</li>
+          </ul>
         </div>
         <div>
           <p>
@@ -267,47 +320,55 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
       <div style="margin-top:44px">
 <div class="stage" data-carousel id="bikeCarousel">
   <div class="slides">
-    <div class="slide on" data-grad="linear-gradient(135deg,#34D399,#A7F3D0 45%,#60A5FA)" data-title="Live network" data-desc="Every New York station from the Kafka stream, refreshed every 60 seconds"><img src="assets/img/bike-live-nyc.webp" alt="Live network — Every New York station from the Kafka stream, refreshed every 60 seconds" loading="eager"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#818CF8,#C4B5FD 45%,#93C5FD)" data-title="Kestra backfill" data-desc="Reference data, trips, streaming, dbt and Bruin as subflows, in order"><img src="assets/img/bike-kestra.webp" alt="Kestra backfill — Reference data, trips, streaming, dbt and Bruin as subflows, in order" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#60A5FA,#93C5FD 45%,#FDBA74)" data-title="Demand" data-desc="A million Jersey City trips in 2025, members against casual riders"><img src="assets/img/bike-demand.webp" alt="Demand — A million Jersey City trips in 2025, members against casual riders" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#FB923C,#FDBA74 45%,#93C5FD)" data-title="Weather impact" data-desc="Trips per hour by temperature band, dry against wet"><img src="assets/img/bike-weather.webp" alt="Weather impact — Trips per hour by temperature band, dry against wet" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#F472B6,#FBCFE8 45%,#60A5FA)" data-title="Rebalancing" data-desc="The stations that drain and the ones that fill up"><img src="assets/img/bike-stations.webp" alt="Rebalancing — The stations that drain and the ones that fill up" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#2DD4BF,#5EEAD4 45%,#A78BFA)" data-title="Data quality" data-desc="Spark's load audit per month, and Bruin's network-health snapshots"><img src="assets/img/bike-quality.webp" alt="Data quality — Spark's load audit per month, and Bruin's network-health snapshots" loading="lazy"></div>
+    <div class="slide on" data-grad="linear-gradient(135deg,#34D399,#A7F3D0 45%,#60A5FA)" data-title="Live network" data-desc="Every New York station from the Kafka stream, refreshed every 60 seconds"><img src="assets/img/bike-live-nyc.webp" width="1040" height="650" alt="Live network — Every New York station from the Kafka stream, refreshed every 60 seconds" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#818CF8,#C4B5FD 45%,#93C5FD)" data-title="Kestra backfill" data-desc="Reference data, trips, streaming, dbt and Bruin as subflows, in order"><img src="assets/img/bike-kestra.webp" width="1000" height="625" alt="Kestra backfill — Reference data, trips, streaming, dbt and Bruin as subflows, in order" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#60A5FA,#93C5FD 45%,#FDBA74)" data-title="Demand" data-desc="A million Jersey City trips in 2025, members against casual riders"><img src="assets/img/bike-demand.webp" width="1440" height="900" alt="Demand — A million Jersey City trips in 2025, members against casual riders" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#FB923C,#FDBA74 45%,#93C5FD)" data-title="Weather impact" data-desc="Trips per hour by temperature band, dry against wet"><img src="assets/img/bike-weather.webp" width="1440" height="900" alt="Weather impact — Trips per hour by temperature band, dry against wet" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#F472B6,#FBCFE8 45%,#60A5FA)" data-title="Rebalancing" data-desc="The stations that drain and the ones that fill up"><img src="assets/img/bike-stations.webp" width="1440" height="900" alt="Rebalancing — The stations that drain and the ones that fill up" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#2DD4BF,#5EEAD4 45%,#A78BFA)" data-title="Data quality" data-desc="Spark's load audit per month, and Bruin's network-health snapshots"><img src="assets/img/bike-quality.webp" width="1440" height="900" alt="Data quality — Spark's load audit per month, and Bruin's network-health snapshots" loading="lazy"></div>
   </div>
 </div>
-<div class="track" role="tablist" aria-label="Screens"></div>
+<div class="track"></div>
 <div class="slide-meta"><span class="t"></span><span class="d"></span></div>
       </div>
 
       <div class="notes">
         <div class="note">
-          <div><span class="tag">Idempotency</span><h4>Every step can be run twice without doubling anything</h4></div>
-          <div><p>Lake months get a <em>_SUCCESS</em> marker, so a re-run skips finished downloads. Spark deletes and reloads one city and month at a time. dlt merges on natural keys with incremental state, and the live upsert refuses an event older than the one it already holds. A backfill that dies halfway is fixed by running it again.</p></div>
+          <div><span class="tag">Idempotency</span><h3>Every step can be run twice without doubling anything</h3></div>
+          <div><p>Lake months get a <code>_SUCCESS</code> marker, so a re-run skips finished downloads. Spark deletes and reloads one city and month at a time. dlt merges on natural keys with incremental state, and the live upsert refuses an event older than the one it already holds. A backfill that dies halfway is fixed by running it again.</p></div>
         </div>
         <div class="note">
-          <div><span class="tag">Reconciliation</span><h4>The warehouse has to agree with Spark, row for row</h4></div>
+          <div><span class="tag">Reconciliation</span><h3>The warehouse has to agree with Spark, row for row</h3></div>
           <div><p>Spark records raw, clean and rejected counts for every month it loads. A dbt test checks that the fact table's row count matches that audit exactly, so a silently dropped partition fails the build instead of quietly shrinking a chart.</p></div>
         </div>
         <div class="note">
-          <div><span class="tag">Streaming</span><h4>At-least-once delivery, with the duplicates handled on purpose</h4></div>
+          <div><span class="tag">Streaming</span><h3>At-least-once delivery, with the duplicates handled on purpose</h3></div>
           <div><p>The producer publishes only stations whose report changed, keyed by station so each one's events stay in order. The lake consumer commits offsets only after its Parquet file is written, so a crash re-reads rather than loses messages, and dbt removes the duplicates that choice creates.</p></div>
         </div>
         <div class="note">
-          <div><span class="tag">Warehouse</span><h4>Postgres, used the way a cloud warehouse would be</h4></div>
+          <div><span class="tag">Warehouse</span><h3>Postgres, used the way a cloud warehouse would be</h3></div>
           <div><p>Trips are range-partitioned by month, so a month filter prunes and a reload touches one partition. A BRIN index covers the time column for next to nothing on time-ordered data. The dashboard connects as a read-only role that can see the marts and nothing else.</p></div>
         </div>
       </div>
     </article>
 
-    <article class="proj" data-r>
+    <article class="proj" id="n8n" data-r>
       <div class="proj-top">
         <div>
+          <p class="label proj-kind">04 &middot; AI automation</p>
           <h2>Solar Call Center Automations</h2>
           <p class="sub">Two n8n workflows for an outbound call center booking solar and roofing appointments.</p>
           <div class="proj-links">
             <a href="https://github.com/Nabil-Sehli/n8n-solar-callcenter-automations">Source <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
             <span>Self-hosted n8n &mdash; importable workflow JSON</span>
           </div>
+          <ul class="stack" aria-label="Stack">
+            <li>n8n</li>
+            <li>Claude API</li>
+            <li>Gemini API</li>
+            <li>Google Sheets</li>
+            <li>Webhooks</li>
+          </ul>
         </div>
         <div>
           <p>
@@ -339,39 +400,40 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
       <div style="margin-top:44px">
 <div class="stage" data-carousel id="n8nCarousel">
   <div class="slides">
-    <div class="slide on" data-grad="linear-gradient(135deg,#FB923C,#FDBA74 45%,#FBCFE8)" data-title="Lead qualification" data-desc="Validate, score with Claude or Gemini, log, respond, then route"><img src="assets/img/n8n-lead-canvas.webp" alt="Lead qualification — Validate, score with Claude or Gemini, log, respond, then route" loading="eager"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#FBBF24,#FDBA74 45%,#F0ABFC)" data-title="Parse Score" data-desc="A stubbed reply said 104 and &ldquo;warm&rdquo;; the parser clamped it and derived &ldquo;hot&rdquo;"><img src="assets/img/n8n-lead-parse.webp" alt="Parse Score — A stubbed reply said 104 and warm; the parser clamped it and derived hot" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#F472B6,#FBCFE8 45%,#C4B5FD)" data-title="Missed call follow-up" data-desc="Wait, draft, enforce, log, then one follow-up an hour later"><img src="assets/img/n8n-sms-canvas.webp" alt="Missed call follow-up — Wait, draft, enforce, log, then one follow-up an hour later" loading="lazy"></div>
-    <div class="slide" data-grad="linear-gradient(135deg,#2DD4BF,#5EEAD4 45%,#FDBA74)" data-title="Enforce SMS Rules" data-desc="Emoji, curly quotes and the wrong opt-out line, fixed in code"><img src="assets/img/n8n-sms-enforce.webp" alt="Enforce SMS Rules — Emoji, curly quotes and the wrong opt-out line, fixed in code" loading="lazy"></div>
+    <div class="slide on" data-grad="linear-gradient(135deg,#FB923C,#FDBA74 45%,#FBCFE8)" data-title="Lead qualification" data-desc="Validate, score with Claude or Gemini, log, respond, then route"><img src="assets/img/n8n-lead-canvas.webp" width="2560" height="1600" alt="Lead qualification — Validate, score with Claude or Gemini, log, respond, then route" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#FBBF24,#FDBA74 45%,#F0ABFC)" data-title="Parse Score" data-desc="A stubbed reply said 104 and &ldquo;warm&rdquo;; the parser clamped it and derived &ldquo;hot&rdquo;"><img src="assets/img/n8n-lead-parse.webp" width="2560" height="1600" alt="Parse Score — A stubbed reply said 104 and warm; the parser clamped it and derived hot" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#F472B6,#FBCFE8 45%,#C4B5FD)" data-title="Missed call follow-up" data-desc="Wait, draft, enforce, log, then one follow-up an hour later"><img src="assets/img/n8n-sms-canvas.webp" width="2560" height="1600" alt="Missed call follow-up — Wait, draft, enforce, log, then one follow-up an hour later" loading="lazy"></div>
+    <div class="slide" data-grad="linear-gradient(135deg,#2DD4BF,#5EEAD4 45%,#FDBA74)" data-title="Enforce SMS Rules" data-desc="Emoji, curly quotes and the wrong opt-out line, fixed in code"><img src="assets/img/n8n-sms-enforce.webp" width="2560" height="1600" alt="Enforce SMS Rules — Emoji, curly quotes and the wrong opt-out line, fixed in code" loading="lazy"></div>
   </div>
 </div>
-<div class="track" role="tablist" aria-label="Screens"></div>
+<div class="track"></div>
 <div class="slide-meta"><span class="t"></span><span class="d"></span></div>
       </div>
 
       <div class="notes">
         <div class="note">
-          <div><span class="tag">Parsing</span><h4>The model's answer is read, never trusted</h4></div>
+          <div><span class="tag">Parsing</span><h3>The model's answer is read, never trusted</h3></div>
           <div><p>The parser pulls JSON out of code fences and surrounding prose, skips thinking blocks, clamps the score to 0&ndash;100 and caps renters in code. The tier comes from the score and the configured thresholds, not from the model, so routing never depends on the model agreeing with itself. Its own tier is kept only for tuning the prompt.</p></div>
         </div>
         <div class="note">
-          <div><span class="tag">Failures</span><h4>A lead the AI couldn't score goes to a person</h4></div>
-          <div><p>The LLM calls retry three times and then continue on error. A refusal, a timeout or unreadable output becomes <em>scoring_status: failed</em> and emails a closer right away. Parking it in nurture could bury a hot lead, and an outage should turn into manual work, not dropped leads.</p></div>
+          <div><span class="tag">Failures</span><h3>A lead the AI couldn't score goes to a person</h3></div>
+          <div><p>The LLM calls retry three times and then continue on error. A refusal, a timeout or unreadable output becomes <code>scoring_status: failed</code> and emails a closer right away. Parking it in nurture could bury a hot lead, and an outage should turn into manual work, not dropped leads.</p></div>
         </div>
         <div class="note">
-          <div><span class="tag">Compliance</span><h4>The prompt asks for a compliant text; the code guarantees it</h4></div>
+          <div><span class="tag">Compliance</span><h3>The prompt asks for a compliant text; the code guarantees it</h3></div>
           <div><p>One curly apostrophe or emoji switches an SMS to UCS-2, where a segment is 70 characters instead of 160 and the message is split and billed several times. The enforcement node converts to plain ASCII, strips whatever opt-out wording the model wrote, appends the exact configured line, and falls back to a fixed template if the draft still doesn't fit.</p></div>
         </div>
         <div class="note">
-          <div><span class="tag">Ordering</span><h4>A 200 means the lead is saved</h4></div>
+          <div><span class="tag">Ordering</span><h3>A 200 means the lead is saved</h3></div>
           <div><p>The webhook answers only after the Sheet write. If Sheets is down, the dialer gets an error and retries, so a lead is never acknowledged and then lost. Phone numbers and emails are never sent to the model, because it doesn't need them to score.</p></div>
         </div>
       </div>
     </article>
 
-    <article class="proj" data-r>
+    <article class="proj" id="ops-platform" data-r>
       <div class="proj-top">
         <div>
+          <p class="label proj-kind">05 &middot; Infrastructure &middot; operations</p>
           <h2>Ops Platform</h2>
           <p class="sub">A server I run like production: built from code, watched, backed up, and restored on purpose to prove it works.</p>
           <div class="proj-links">
@@ -379,6 +441,20 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
             <a href="https://status.nabil-ops.duckdns.org">Live status page <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
             <span>Oracle Cloud free tier &mdash; Terraform + Ansible</span>
           </div>
+          <ul class="stack" aria-label="Stack">
+            <li>Terraform</li>
+            <li>Ansible</li>
+            <li>Oracle Cloud</li>
+            <li>Docker</li>
+            <li>Caddy</li>
+            <li>Prometheus</li>
+            <li>Alertmanager</li>
+            <li>Grafana</li>
+            <li>Uptime Kuma</li>
+            <li>restic</li>
+            <li>Backblaze B2</li>
+            <li>Tailscale</li>
+          </ul>
         </div>
         <div>
           <p>
@@ -389,7 +465,7 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
           </p>
           <p>
             Nothing on it was clicked together by hand. A fresh box reaches the same state from this
-            repository, and a full re-run of the playbook reports <em>changed&nbsp;=&nbsp;0</em>, which is
+            repository, and a full re-run of the playbook reports <code>changed&nbsp;=&nbsp;0</code>, which is
             how I know the code and the machine still agree.
           </p>
           <p>
@@ -411,16 +487,16 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
         <div class="stage" style="--stage-grad:linear-gradient(135deg,#60A5FA,#A78BFA 45%,#5EEAD4)">
           <div class="slides">
             <div class="slide on">
-              <svg viewBox="0 0 1000 400" style="display:block;width:100%;height:auto;border-radius:10px;box-shadow:0 24px 70px rgba(0,0,0,.34);background:#fff;font-family:inherit" role="img" aria-label="Architecture diagram: the internet reaches Caddy, the only container publishing ports; behind it run n8n, Uptime Kuma and Grafana. Every n8n run posts an event to the llmobs collector, which Prometheus scrapes alongside node_exporter and cAdvisor. Both Uptime Kuma and Alertmanager send alerts to Telegram, and the Docker volumes are copied nightly by restic to Backblaze B2.">
+              <svg class="diagram" viewBox="0 0 1000 400" role="img" aria-label="Architecture diagram: the internet reaches Caddy, the only container publishing ports; behind it run n8n, Uptime Kuma and Grafana. Every n8n run posts an event to the llmobs collector, which Prometheus scrapes alongside node_exporter and cAdvisor. Both Uptime Kuma and Alertmanager send alerts to Telegram, and the Docker volumes are copied nightly by restic to Backblaze B2.">
                 <defs>
                   <marker id="opsArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                    <path d="M0 0 10 5 0 10z" fill="#A9A9B4"/>
+                    <path class="arrowhead" d="M0 0 10 5 0 10z"/>
                   </marker>
                 </defs>
-                <g fill="none" stroke="#C9C9D2" stroke-width="1.5" marker-end="url(#opsArrow)">
+                <g class="edge" fill="none" stroke-width="1.5" marker-end="url(#opsArrow)">
                   <path d="M170 67h48"/>
                   <path d="M400 62 462 44"/>
-                  <path d="M400 70h58"/>
+                  <path d="M400 70 462 100"/>
                   <path d="M400 78 462 156"/>
                   <path d="M835 150v-12"/>
                   <path d="M650 44h58"/>
@@ -430,11 +506,11 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
                   <path d="M650 266h58"/>
                   <path d="M835 302v6"/>
                 </g>
-                <g fill="none" stroke="#C9C9D2" stroke-width="1.5" stroke-dasharray="5 5" marker-end="url(#opsArrow)">
+                <g class="edge" fill="none" stroke-width="1.5" stroke-dasharray="5 5" marker-end="url(#opsArrow)">
                   <path d="M466 112H110v116"/>
                   <path d="M720 120H700v92H150v16"/>
                 </g>
-                <g fill="#fff" stroke="#DCDCE3" stroke-width="1.5">
+                <g class="box" stroke-width="1.5">
                   <rect x="20" y="40" width="150" height="54" rx="10"/>
                   <rect x="230" y="40" width="170" height="54" rx="10"/>
                   <rect x="470" y="20" width="180" height="48" rx="10"/>
@@ -448,7 +524,7 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
                   <rect x="720" y="244" width="230" height="56" rx="10"/>
                   <rect x="720" y="312" width="230" height="56" rx="10"/>
                 </g>
-                <g fill="#0D0A00" font-size="15" font-weight="500" text-anchor="middle">
+                <g class="t" font-size="15" font-weight="500" text-anchor="middle">
                   <text x="95" y="72">Internet</text>
                   <text x="315" y="64">Caddy</text>
                   <text x="560" y="49">n8n</text>
@@ -462,7 +538,7 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
                   <text x="835" y="269">restic, nightly</text>
                   <text x="835" y="337">Backblaze B2</text>
                 </g>
-                <g fill="#92929A" font-size="12" text-anchor="middle">
+                <g class="s" font-size="12" text-anchor="middle">
                   <text x="315" y="82">TLS, the only open ports</text>
                   <text x="835" y="56">trace, metrics and cost per run</text>
                   <text x="110" y="286">failures, and silence</text>
@@ -479,28 +555,28 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
 
       <div class="notes">
         <div class="note">
-          <div><span class="tag">Infrastructure</span><h4>The repository is the server</h4></div>
-          <div><p>Terraform creates the network, the firewall rules and the instance; Ansible takes it from a fresh Ubuntu image to the running stack &mdash; hardening, Docker, the compose file, monitoring and backups. Rebuilding after a total loss is <em>terraform apply</em>, one playbook run and a restore. That claim is only worth something because a re-run reports no changes, so the code hasn't quietly drifted from the machine.</p></div>
+          <div><span class="tag">Infrastructure</span><h3>The repository is the server</h3></div>
+          <div><p>Terraform creates the network, the firewall rules and the instance; Ansible takes a fresh Ubuntu image to the running stack &mdash; hardening, Docker, the compose file, monitoring and backups. Rebuilding after a total loss is <code>terraform apply</code>, one playbook run and a restore, and a re-run that reports no changes is what shows the code hasn't drifted from the machine.</p></div>
         </div>
         <div class="note">
-          <div><span class="tag">Backups</span><h4>I deleted the data to find out whether the backups were real</h4></div>
-          <div><p>Every night restic sends the volumes to Backblaze, taking consistent SQLite copies while n8n and Uptime Kuma keep serving. A monthly drill restores the newest snapshot, re-verifies a tenth of the stored data and checks the databases. Then I removed n8n's volume outright: the service was back in <b>31 seconds</b> with every workflow, execution and credential intact &mdash; including the encryption key, without which credentials restore as unreadable blobs. The <a href="https://github.com/Nabil-Sehli/oracle-ops-platform/blob/main/docs/incidents/2026-09-17-n8n-data-loss-drill.md">write-up</a> covers what it exposed.</p></div>
+          <div><span class="tag">Backups</span><h3>I deleted the data to find out whether the backups were real</h3></div>
+          <div><p>Every night restic sends the volumes to Backblaze, taking consistent SQLite copies while the services keep serving, and a monthly drill restores the newest snapshot and checks it. Then I removed n8n's volume outright: it was back in <b>31 seconds</b> with every workflow, execution and credential intact &mdash; including the encryption key, without which credentials restore as unreadable blobs. The <a href="https://github.com/Nabil-Sehli/oracle-ops-platform/blob/main/docs/incidents/2026-09-17-n8n-data-loss-drill.md">write-up</a> covers what it exposed.</p></div>
         </div>
         <div class="note">
-          <div><span class="tag">Alerting</span><h4>Two paths, because a silent monitor looks exactly like a healthy one</h4></div>
-          <div><p>Alertmanager reports what is wrong: disk over 80%, a disk that will be full within a day, memory, an out-of-memory kill, a container that vanished. A push monitor reports <em>silence</em> &mdash; when a nightly backup doesn't check in within 26 hours, that is its own alert. The drill also measured the blind spot: an outage has to last about three minutes before either path speaks, which is the price of not being trained to ignore Telegram.</p></div>
+          <div><span class="tag">Alerting</span><h3>Two paths, because a silent monitor looks exactly like a healthy one</h3></div>
+          <div><p>Alertmanager reports what is wrong: a disk over 80% or on course to fill within a day, memory, an out-of-memory kill, a container that vanished. A push monitor reports <em>silence</em>: a nightly backup that hasn't checked in within 26 hours is its own alert. Either path needs about three minutes of outage before it speaks, the price of not being trained to ignore Telegram.</p></div>
         </div>
         <div class="note">
-          <div><span class="tag">LLM observability</span><h4>&ldquo;A run failed&rdquo; is not an answer</h4></div>
-          <div><p>Prometheus says a container is up and n8n says an execution failed. Neither says <em>which node</em> broke, on which model, after how long, or what the run cost. So every run posts one HTTP event to a collector I wrote &mdash; about 600 lines, standard library only &mdash; which turns it into a readable trace and eight metric families: failures by node and error type, per-node latency, tokens and spend per model. Failures needed no workflow edits at all: an error-trigger workflow reports every failed execution in n8n. Retries are deduplicated by run id, because n8n retries a failed HTTP node three times and each retry would otherwise inflate every rate and every cost figure. The <a href="https://github.com/Nabil-Sehli/oracle-ops-platform/blob/main/docs/llm-observability.md">write-up</a> covers the rest, including why a model missing from the price table raises its own alert &mdash; a spend panel that quietly reads $0.00 after a model switch is worse than no panel.</p></div>
+          <div><span class="tag">LLM observability</span><h3>&ldquo;A run failed&rdquo; is not an answer</h3></div>
+          <div><p>Prometheus says a container is up and n8n says an execution failed; neither says <em>which node</em> broke, on which model, or what the run cost. So every run posts one event to a collector I wrote &mdash; about 600 lines, standard library only &mdash; that turns it into a trace and eight metric families: failures by node, per-node latency, tokens and spend per model, with n8n's retries deduplicated so they don't inflate any of it. The <a href="https://github.com/Nabil-Sehli/oracle-ops-platform/blob/main/docs/llm-observability.md">write-up</a> covers the rest, including why a model missing from the price table raises its own alert.</p></div>
         </div>
         <div class="note">
-          <div><span class="tag">Incident</span><h4>The monitoring stack was the one thing nothing was watching</h4></div>
-          <div><p>Unattended upgrades reboot the box nightly. One morning six containers came back and two did not: Prometheus and Alertmanager handle <em>SIGTERM</em> in about 100&nbsp;ms, so they reached a clean stopped state before the Docker daemon went down &mdash; and <em>restart: unless-stopped</em> does not restart a container that is stopped, whoever stopped it. The well-behaved containers were punished for being well-behaved. Metrics and alerts were blind for 35 hours and nothing said so, because every rule that would have caught it was evaluated by Prometheus itself. <em>restart: always</em> fixed the restart; noticing a recurrence needed something outside the alerting system, so Uptime Kuma &mdash; a separate process with its own Telegram path &mdash; now health-checks both of them internally. Stopping Prometheus on purpose the same day: 89 seconds to detect. A reboot drill followed, and all nine containers came back unattended in 1m&nbsp;41s. The <a href="https://github.com/Nabil-Sehli/oracle-ops-platform/blob/main/docs/incidents/2026-09-18-monitoring-silent-after-reboot.md">write-up</a> has the timeline.</p></div>
+          <div><span class="tag">Incident</span><h3>The monitoring stack was the one thing nothing was watching</h3></div>
+          <div><p>After a nightly reboot, Prometheus and Alertmanager didn't come back: they stop cleanly in about 100&nbsp;ms, before the Docker daemon goes down, and <code>restart: unless-stopped</code> leaves a stopped container stopped. Metrics and alerts were blind for 35 hours and nothing said so, because every rule that would have noticed ran inside Prometheus. <code>restart: always</code> fixed the restart, Uptime Kuma now watches both from outside, and a reboot drill brought all nine containers back unattended in 1m&nbsp;41s. The <a href="https://github.com/Nabil-Sehli/oracle-ops-platform/blob/main/docs/incidents/2026-09-18-monitoring-silent-after-reboot.md">write-up</a> has the timeline.</p></div>
         </div>
         <div class="note">
-          <div><span class="tag">Exposure</span><h4>One way in, and the webhooks cost money</h4></div>
-          <div><p>Only the proxy publishes ports; n8n, Grafana and the rest are unreachable except through it, and node_exporter binds to the Docker bridge address instead of the public interface. The n8n webhooks spend LLM quota and send mail, so the proxy rejects anything without a shared-secret header before n8n starts an execution. SSH no longer listens to the internet at all: port 22 is closed in the firewall and the only way in is over a private Tailscale network, key-only, with repeat offenders banned.</p></div>
+          <div><span class="tag">Exposure</span><h3>One way in, and the webhooks cost money</h3></div>
+          <div><p>Only the proxy publishes ports, and node_exporter binds to the Docker bridge rather than the public interface. The n8n webhooks spend LLM quota and send mail, so the proxy rejects any request without a shared-secret header before n8n starts an execution. SSH doesn't listen to the internet at all: the only way in is key-only, over a private Tailscale network.</p></div>
         </div>
       </div>
     </article>
@@ -510,6 +586,7 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
 
 </main>
 
+<!-- @footer -->
 <footer class="sitefoot">
   <div class="shell in">
     <span>Nabil Sehli — 2026</span>
@@ -520,7 +597,11 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
       <a href="studies.html">Studies</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <span>Built with Lenis + GSAP</span>
+    <span class="elsewhere">
+      <a href="https://github.com/Nabil-Sehli">GitHub</a>
+      <a href="https://linkedin.com/in/sehli-nabil">LinkedIn</a>
+      <a href="mailto:sehlinabil102@gmail.com">Email</a>
+    </span>
   </div>
 </footer>
 
@@ -528,6 +609,7 @@ Bitte erg&auml;nzen und vor Schichtende abzeichnen.</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="assets/main.js"></script>
+<!-- /@footer -->
 
 </body>
 </html>
